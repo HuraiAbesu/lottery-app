@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>抽選アプリ</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="manifest" href="manifest.json">
+        <link rel="icon" href="./ficon/lotteryapp.ico" type="image/png">
+        <link rel="shortcut icon" href="./icons/lotteryapp.png" type="image/x-icon">
+        
+
+        <link rel="apple-touch-icon" sizes="192x192" href="./icons/icon-192x192.png">
+    </head>
+    
+<body>
+    <div id="appContainer">
+        <div id="prizeDisplay" class="hidden">
+            現在の景品: <span id="prizeName">--</span>
+        </div>
+
+        <div id="roulette">
+            <div id="spinArea">--</div>
+            <button id="startButton">スタート</button>
+        </div>
+    </div>
+
+    <div id="settingsContainer">
+        <h2>設定</h2>
+
+        <div id="modeSelection">
+            <label><input type="radio" name="mode" value="roulette" checked> ルーレット</label>
+            <label><input type="radio" name="mode" value="slot"> スロット</label>
+        </div>
+
+        <div id="prizeInput">
+            <label for="prizeList">ルーレット用景品（カンマで区切り複数入力可能）:</label>
+            <input type="text" id="prizeList" placeholder="例: 景品A, 景品B, 景品C">
+        </div>
+
+        <div id="slotInput" class="hidden">
+            <label for="currentPrizeList">スロット用景品（カンマで区切り複数入力可能）:</label>
+            <input type="text" id="currentPrizeList" placeholder="例: 景品1, 景品2, 景品3">
+            <label for="rangeField">範囲を設定（例: 1-100, 500-1000）:</label>
+            <input type="text" id="rangeField" placeholder="例: 1-100,500-1000">
+        </div>
+    </div>
+
+    <footer>
+        抽選アプリ | <strong>Powered by Synfortech</strong>
+    </footer>
+
+    <audio id="drumRoll" src="sound/doramu.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
